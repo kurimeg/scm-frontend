@@ -1,19 +1,19 @@
 <template>
   <div id="app">
     <router-view></router-view>
-    <loading></loading>
-    <modal></modal>
+    <!-- <loading></loading>
+    <modal></modal> -->
   </div>
 </template>
 
 <script>
-  import Modal from './components/Modal'
-  import Loading from './components/Loading'
+  // import Modal from './components/Modal'
+  // import Loading from './components/Loading'
 
   export default {
-    components: {
-      Loading, Modal
-    }
+    // components: {
+    //   Loading, Modal
+    // }
   }
 </script>
 
@@ -21,6 +21,12 @@
   body {
     margin: 0 0 0 0;
     font-family: 'Century Gothic';
+  }
+  input:focus {
+    outline:none;
+  }
+  button:focus {
+    outline:none;
   }
   .main-layer {
     position: absolute;
