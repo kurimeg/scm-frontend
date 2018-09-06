@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/pages/Login'
-// import Chart from '@/pages/Chart/Index'
+import Chart from '@/pages/Chart'
 
 Vue.use(Router)
 
@@ -11,15 +11,15 @@ const router = new Router({
       path: '/',
       name: 'login',
       component: Login
+    },
+    {
+      path: '/chart',
+      name: 'chart',
+      component: Chart,
+      meta: {
+        requiresAuth: true
+      }
     }
-    // {
-    //   path: '/chart',
-    //   name: 'chart',
-    //   component: Chart,
-    //   meta: {
-    //     requiresAuth: true
-    //   }
-    // }
   ]
 })
 
