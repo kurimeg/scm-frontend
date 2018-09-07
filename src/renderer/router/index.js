@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/pages/Login'
-import Chart from '@/pages/Chart'
+import Chart from '@/pages/Chart/Index'
 
 Vue.use(Router)
 

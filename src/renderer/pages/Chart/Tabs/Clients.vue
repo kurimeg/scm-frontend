@@ -188,8 +188,7 @@ export default {
 .icon:active{
 	width: 34px;
   height: 34px;
-	margin-top: 7.9px;
-	filter:brightness(98%);
+	filter: brightness(98%);
 }
 
 .logout{
