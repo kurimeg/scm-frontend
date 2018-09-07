@@ -40,9 +40,9 @@ const actions = {
   logout ({ commit, rootState }) {
     localStorage.removeItem('authInfo')
     // TODO: まとめてstateを初期化したい
-    commit('getMaster/reset', null, { root: true })
-    commit('getUserPath/reset', null, { root: true })
-    commit('reserve/reset', null, { root: true })
+    // commit('getMaster/reset', null, { root: true })
+    // commit('getUserPath/reset', null, { root: true })
+    // commit('reserve/reset', null, { root: true })
     commit('logout')
     router.replace('/')
   }

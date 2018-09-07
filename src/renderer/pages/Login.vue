@@ -46,7 +46,7 @@ export default {
         },
         token: constants.GUEST_USER_TOKEN
       })
-    } else if (this.$store.state.auth.isLogged) {
+    } else if (this.$store.state['feature/auth'].isLogged) {
       this.showLoading(true)
       let authInfo = JSON.parse(localStorage.getItem('authInfo'))
       this.login({
