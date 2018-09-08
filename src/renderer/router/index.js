@@ -8,12 +8,12 @@ Vue.use(Router)
 const router = new Router({
   routes: [
     {
-      path: '/',
+      path: '/login',
       name: 'login',
       component: Login
     },
     {
-      path: '/chart',
+      path: '/',
       name: 'chart',
       component: Chart,
       meta: {

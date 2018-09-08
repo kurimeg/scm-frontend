@@ -18,7 +18,7 @@
       </div>
     </header>
     <main class="chart-contents">
-
+      <seating></seating>
     </main>
     <footer class="chart-footer">
 			<chart-tab
@@ -27,36 +27,17 @@
         :floor="floor"
       ></chart-tab>	
     </footer>
-		<!-- <div class="tabs">
-			<tab
-        v-for="floorPlace in floorPlaces" 
-        :key="floorPlace.FLOOR_PLACE_DV"
-        :floorPlace="floorPlace"
-      ></tab>				
-		</div> -->
-		<!-- <div class="desk-layer">
-			<desk></desk>
-		</div>
-		<div class="seat-layer" >
-				<seat 
-					v-for="seat in this.seats" 
-					:id="seat.SEAT_NO" 
-					:key="seat.SEAT_NO" 
-					:class="{ 'seatY': !seat.VERTICAL_FLG , 'searched': userPath.length != 0 && seat.SEAT_NO === userPath[0].SEAT_NO }" 			
-					:style="{ left: seat.CONTENT_POSITION_X + 'px', top: seat.CONTENT_POSITION_Y + 'px' }"
-					:seat="seat" 	
-				></seat>
-		</div> -->
 	</div>
 </template>
 
 <script>
 import ChartTab from '@/components/ChartTab'
+import Seating from '@/pages/Chart/Tabs/Seating'
 import { mapActions, mapState } from 'vuex'
 
 export default {
   components: {
-    ChartTab
+    ChartTab, Seating
   },
   data: function () {
     return {
@@ -64,7 +45,6 @@ export default {
     }
   },
   computed: {
-    ...mapState('feature/auth', ['token']),
     ...mapState('feature/layout', ['floors'])
   },
   watch: {
@@ -107,6 +87,7 @@ export default {
     justify-content: flex-end;
   }
   .chart-contents {
+    position: relative;
     flex-grow: 1;
   }
   .chart-footer {
